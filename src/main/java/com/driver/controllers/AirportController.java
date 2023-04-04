@@ -228,9 +228,10 @@ public class AirportController {
 
 
         int noOfPeopleBooked = flightToPassengerDb.get(flightId).size();
-        int variableFare = (noOfPeopleBooked*(noOfPeopleBooked+1))*25;
-        int fixedFare = 3000*noOfPeopleBooked;
-        int totalFare = variableFare + fixedFare;
+       // int variableFare = (noOfPeopleBooked*(noOfPeopleBooked+1))*25;
+      //  int fixedFare = 3000*noOfPeopleBooked;
+       // int totalFare = variableFare + fixedFare;
+        int totalFare=(25 * noOfPeopleBooked * noOfPeopleBooked) + (2975 * noOfPeopleBooked);
 
         return totalFare;
     }
